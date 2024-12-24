@@ -11,7 +11,7 @@ baseurl: ""
 repository: xqoasis/xqoasis.github.io
 
 # theme
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default"  # 可选: "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 locale: "en-US"

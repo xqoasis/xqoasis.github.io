@@ -155,7 +155,6 @@ exclude:
   - utilities
   - venv
 
-# 插件
 plugins:
   - jekyll-paginate
   - jekyll-sitemap

@@ -1,0 +1,168 @@
+# _config.yml
+
+# basic
+title: Q's Blog
+subtitle: hiking • photographing • tech
+name: "Qing"
+description: >- 
+  Sharing hiking experiences and photography.
+url: "https://xqoasis.github.io"
+baseurl: ""
+repository: xqoasis/xqoasis.github.io
+
+# theme
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "default"  # 可选: "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+locale: "en-US"
+timezone: PST
+search: true
+search_full_content: true
+lunr:
+  search_within_pages: true
+
+# # SEO 相关
+# twitter_username: your-twitter
+# github_username: your-github
+# og_image: /assets/images/site-logo.png
+
+# 作者信息
+author:
+  name: "Q"
+  avatar: "/assets/images/bio-photo.jpg"
+  bio: >-
+    Hiking
+    Photography
+    Coding
+  location: "Seattle, WA"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/xqoasis"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/qing-xiao-4968691a9/"
+
+# footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/xqoasis"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/qing-xiao-4968691a9/"
+atom_feed: 
+  hide: "true"
+
+# dafult page
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      toc: true
+      toc_sticky: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# paginate
+paginate: 6
+paginate_path: /page:num/
+
+# categorize
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# comments:
+#   provider: "disqus"
+#   disqus:
+#     shortname: "your-disqus-shortname"
+
+# analytics:
+#   provider: "google-gtag"
+#   google:
+#     tracking_id: "UA-XXXXXXXXX-X"
+#     anonymize_ip: false
+
+# site generate setting
+permalink: /:categories/:title/
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+include:
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+  - utilities
+  - venv
+
+# 插件
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-seo-tag
+
+azure_cdn:
+  url: "https://xqblog-images.azureedge.net" 

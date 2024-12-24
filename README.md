@@ -1,1 +1,0 @@
-# xqoasis.github.io

@@ -1,6 +1,6 @@
 ---
 layout: home
-author_profile: true
+author_profile: false
 header:
   overlay_image: /assets/images/home/header.jpg
   caption: "Photo credit: [**Q**]"

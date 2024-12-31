@@ -6,7 +6,7 @@ header:
   caption: "Photo credit: [**Q**]"
 # excerpt: "Software Engineer | AI Enthusiast | Hiking Photographer"
 intro: 
-  - excerpt: 'To share something here.'
+  - excerpt: 'Record something that you might not care.'
 feature_row:
   - image_path: https://xqblogimages.blob.core.windows.net/blog-images/gcp/DSC00047.webp
     alt: "Photos"

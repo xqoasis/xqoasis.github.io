@@ -2,10 +2,10 @@
 
 # basic
 title: Q's Blog
-subtitle: hiking • photographing • tech
+subtitle: Just • to • record
 name: "Qing"
 description: >- 
-  Sharing hiking experiences and photography.
+  Record something that you might not care.
 url: "https://xqoasis.github.io"
 baseurl: ""
 repository: xqoasis/xqoasis.github.io
@@ -31,9 +31,9 @@ author:
   name: "Q"
   avatar: "/assets/images/bio-photo.jpg"
   bio: >-
-    Hiking
-    Photography
-    Coding
+    To
+    Record
+    Something
   location: "Seattle, WA"
   links:
     - label: "GitHub"

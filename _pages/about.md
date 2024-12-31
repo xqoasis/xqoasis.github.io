@@ -6,9 +6,9 @@ author_profile: false
 ---
 
 
-- Hiking
-- Coding
-- Writing
+- Sometimes release the shutter
+- Write something if I got time
+- 打好每一颗球
 
 ### Contact
-- Email: [xqoasis]
+- Email: xqoasis as prefix for the gmail

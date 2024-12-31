@@ -15,18 +15,25 @@ feature_row:
     url: "/202412_gcp/"
     btn_label: "Album"
     btn_class: "btn--primary"
-  - image_path: https://xqblog-images.azureedge.net/blog-images/bay/sunrise/DSC09940.webp
+  - image_path: https://xqblog-images.azureedge.net/blog-images/bay/sunrise/DSC09937-Enhanced-NR.webp
     alt: "Photos"
     title: "Bay area"
     excerpt: "202411"
     url: "/202411_bay/"
     btn_label: "Album"
     btn_class: "btn--primary"
-  - image_path: https://xqblog-images.azureedge.net/blog-images/ect/DSC09869-2.webp
+  - image_path: https://xqblog-images.azureedge.net/blog-images/ect/DSC09843-2.webp
     alt: "Photos"
     title: "Enchantment"
     excerpt: "202410"
     url: "/202410_ect/"
+    btn_label: "Album"
+    btn_class: "btn--primary"
+  - image_path: https://xqblog-images.azureedge.net/blog-images/others/DSC09012-Enhanced-NR.webp
+    alt: "Photos"
+    title: "Others"
+    # excerpt: "202410"
+    url: "/others/"
     btn_label: "Album"
     btn_class: "btn--primary"
 ---

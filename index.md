@@ -36,6 +36,13 @@ feature_row:
     url: "/others/"
     btn_label: "Album"
     btn_class: "btn--primary"
+  - image_path: https://xqblog-images.azureedge.net/blog-images/pana/DSC09473.webp
+    alt: "Photos"
+    title: "Panorama"
+    excerpt: "202409"
+    url: "/202409_pana/"
+    btn_label: "Album"
+    btn_class: "btn--primary"
 ---
 
 {% include feature_row id="intro" type="center" %}

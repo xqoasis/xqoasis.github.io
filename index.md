@@ -43,6 +43,13 @@ feature_row:
     url: "/202409_pana/"
     btn_label: "Album"
     btn_class: "btn--primary"
+  - image_path: https://xqblogimages.blob.core.windows.net/blog-images/zion/quality_8/DSC04132.webp
+    alt: "Photos"
+    title: "2025 New Year"
+    excerpt: "202501"
+    url: "/202501_np/"
+    btn_label: "Album"
+    btn_class: "btn--primary"
 ---
 
 {% include feature_row id="intro" type="center" %}

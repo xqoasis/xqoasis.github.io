@@ -1,4 +1,5 @@
 .github/
 venv/
+urlLog
 utilities/uploadAzureContainer.py
 utilities/webPConverter.py

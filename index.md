@@ -6,8 +6,15 @@ header:
   caption: "Photo credit: [**Q**]"
 # excerpt: "Software Engineer | AI Enthusiast | Hiking Photographer"
 intro: 
-  - excerpt: 'Record something that you might not care.'
+  - excerpt: 'Something that you may not care.'
 feature_row:
+  - image_path: https://xqblogimages.blob.core.windows.net/blog-images/zion/quality_8/DSC04131.webp
+    alt: "Photos"
+    title: "2025 New Year"
+    excerpt: "202501"
+    url: "/202501_np/"
+    btn_label: "Album"
+    btn_class: "btn--primary"
   - image_path: https://xqblogimages.blob.core.windows.net/blog-images/gcp/DSC00047.webp
     alt: "Photos"
     title: "Gold Creek Pond"
@@ -29,13 +36,6 @@ feature_row:
     url: "/202410_ect/"
     btn_label: "Album"
     btn_class: "btn--primary"
-  - image_path: https://xqblog-images.azureedge.net/blog-images/others/DSC09012-Enhanced-NR.webp
-    alt: "Photos"
-    title: "Others"
-    # excerpt: "202410"
-    url: "/others/"
-    btn_label: "Album"
-    btn_class: "btn--primary"
   - image_path: https://xqblog-images.azureedge.net/blog-images/pana/DSC09473.webp
     alt: "Photos"
     title: "Panorama"
@@ -43,11 +43,11 @@ feature_row:
     url: "/202409_pana/"
     btn_label: "Album"
     btn_class: "btn--primary"
-  - image_path: https://xqblogimages.blob.core.windows.net/blog-images/zion/quality_8/DSC04132.webp
+  - image_path: https://xqblog-images.azureedge.net/blog-images/others/DSC09012-Enhanced-NR.webp
     alt: "Photos"
-    title: "2025 New Year"
-    excerpt: "202501"
-    url: "/202501_np/"
+    title: "Others"
+    # excerpt: "202410"
+    url: "/others/"
     btn_label: "Album"
     btn_class: "btn--primary"
 ---

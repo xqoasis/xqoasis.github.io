@@ -3,3 +3,4 @@ venv/
 urlLog
 utilities/uploadAzureContainer.py
 utilities/webPConverter.py
+_site/

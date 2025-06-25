@@ -21,12 +21,12 @@ search_full_content: true
 lunr:
   search_within_pages: true
 
-# # SEO 相关
+# SEO
 # twitter_username: your-twitter
 # github_username: your-github
 # og_image: /assets/images/site-logo.png
 
-# 作者信息
+# Author
 author:
   name: "Q"
   avatar: "/assets/images/bio-photo.jpg"

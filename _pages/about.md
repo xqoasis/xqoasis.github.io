@@ -11,4 +11,4 @@ author_profile: false
 - 打好每一颗球
 
 ### Contact
-- Email: xqoasis as prefix for the gmail
+- Email: xqoasis at gmail

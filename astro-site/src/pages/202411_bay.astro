@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
+import Lightbox from '../components/Lightbox.astro';
+
+const bay_sunrise1 = [
+  { image_path: '/gallery/DSC09937-Enhanced-NR.webp', alt: 'Bay Area sunrise' },
+];
+
+const bay_sunrise = [
+  { image_path: '/gallery/DSC09940.webp', alt: 'Bay Area sunrise' },
+  { image_path: '/gallery/DSC09946.webp', alt: 'Bay Area sunrise' },
+  { image_path: '/gallery/DSC09936-Enhanced-NR.webp', alt: 'Bay Area sunrise' },
+  { image_path: '/gallery/DSC09940-Enhanced-NR.webp', alt: 'Bay Area sunrise' },
+  { image_path: '/gallery/DSC09935.webp', alt: 'Bay Area sunrise' },
+];
+
+const bay_park1 = [
+  { image_path: '/gallery/DSC09960.webp', alt: 'Bay Area park' },
+];
+
+const bay_park = [
+  { image_path: '/gallery/DSC00019.webp', alt: 'Bay Area park' },
+  { image_path: '/gallery/DSC09984.webp', alt: 'Bay Area park' },
+  { image_path: '/gallery/DSC00013.webp', alt: 'Bay Area park' },
+  // DSC09969 removed — mismatched photo (not Bay Area)
+];
+---
+
+<BaseLayout title="Bay Area - Q's Blog">
+  <div class="container">
+    <div class="gallery-header">
+      <h1>Bay Area</h1>
+      <div class="gallery-description">
+        <p><strong>2024.11 | Bay Area</strong></p>
+        <ul>
+          <li>在感恩节又去了一趟湾区。</li>
+          <li>第一次在湾区自驾，感觉不错。我终于开上了加州101。湾区的路普遍比西雅图宽很多，但路的质量不敢恭维。</li>
+          <li>明白了湾区的阳光税不止是阳光，还包括无数次的日出和日落，包括光影随着时间的推移，其中让人惊叹的微妙变化。交税买了一本色彩与搭配的百科全书。</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="gallery-section">
+      <GalleryGrid images={bay_sunrise1} layout="single" />
+      <GalleryGrid images={bay_sunrise} layout="half" caption="2024.11, Mission Peak in the Thanks Giving day morning." />
+    </section>
+
+    <hr />
+
+    <section class="gallery-section">
+      <GalleryGrid images={bay_park1} layout="single" />
+      <GalleryGrid images={bay_park} layout="half" caption="2024.11, Mission Peak in the Thanks Giving day morning." />
+    </section>
+  </div>
+
+  <Lightbox />
+</BaseLayout>

@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { albums } from '../data/albums';
+---
+
+<BaseLayout title="Q's Blog">
+  <section class="hero">
+    <img class="hero-image" src="/images/home/header.jpg" alt="Header" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Q's Blog</h1>
+      <p>Something that you may not care.</p>
+    </div>
+  </section>
+
+  <section class="albums-section container" id="gallery">
+    <h2>Gallery</h2>
+    <div class="albums-grid">
+      {albums.map(album => (
+        <a href={`/${album.slug}/`} class="album-card">
+          <img src={album.cover} alt={album.title} loading="lazy" />
+          <div class="album-card-overlay">
+            <span class="album-card-title">{album.title}</span>
+            {album.date && <span class="album-card-date">{album.date}</span>}
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

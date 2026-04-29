@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
+import Lightbox from '../components/Lightbox.astro';
+
+const others1 = [
+  { image_path: '/gallery/DSC09130.webp', alt: 'Vesper peak' },
+];
+
+const others2 = [
+  { image_path: '/gallery/DSC08961.webp', alt: 'Tiger #3' },
+  { image_path: '/gallery/DSC09908.webp', alt: 'Wallas fall' },
+];
+
+const others3 = [
+  { image_path: '/gallery/DSC09026-Enhanced-NR.webp', alt: 'Sunset in Bellevue' },
+  { image_path: '/gallery/DSC09012-Enhanced-NR.webp', alt: 'Sunset in Bellevue' },
+];
+---
+
+<BaseLayout title="Other Photos - Q's Blog">
+  <div class="container">
+    <div class="gallery-header">
+      <h1>Other Photos</h1>
+      <div class="gallery-description">
+        <p>Pieces to drop here.</p>
+      </div>
+    </div>
+
+    <section class="gallery-section">
+      <GalleryGrid images={others1} layout="single" caption="Vesper peak" />
+      <GalleryGrid images={others2} layout="half" caption="Tiger #3 and Wallas fall" />
+      <GalleryGrid images={others3} layout="half" caption="Sunset in Bellevue" />
+    </section>
+  </div>
+
+  <Lightbox />
+</BaseLayout>

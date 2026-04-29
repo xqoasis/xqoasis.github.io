@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
+import Lightbox from '../components/Lightbox.astro';
+
+// DSC05860 removed — file not available
+const bryce_others: never[] = [];
+
+const bryce_1 = [
+  { image_path: '/gallery/DSC04131.webp', url: '/gallery/DSC04131.webp', alt: 'Bryce Canyon' },
+];
+
+const bryce_2 = [
+  { image_path: '/gallery/DSC04073.webp', url: '/gallery/DSC04073.webp', alt: 'Bryce Canyon' },
+  { image_path: '/gallery/DSC04033.webp', url: '/gallery/DSC04033.webp', alt: 'Valley of Fire' },
+  { image_path: '/gallery/DSC04102.webp', url: '/gallery/DSC04102.webp', alt: 'Bryce Canyon' },
+  { image_path: '/gallery/DSC04046.webp', url: '/gallery/DSC04046.webp', alt: 'Valley of Fire' },
+];
+
+const zion_1 = [
+  { image_path: '/gallery/DSC04153.webp', url: '/gallery/DSC04153.webp', alt: 'Zion NP' },
+];
+
+const zion_2 = [
+  { image_path: '/gallery/DSC04170.webp', url: '/gallery/DSC04170.webp', alt: 'Zion NP' },
+  { image_path: '/gallery/DSC04191.webp', url: '/gallery/DSC04191.webp', alt: 'Zion NP' },
+];
+
+const people = [
+  { image_path: '/gallery/DSC04139.webp', url: '/gallery/DSC04139.webp', alt: 'People' },
+];
+
+const people_2 = [
+  { image_path: '/gallery/DSCF3758.webp', url: '/gallery/DSCF3758.webp', alt: 'People' },
+  { image_path: '/gallery/DSC04176.webp', url: '/gallery/DSC04176.webp', alt: 'People' },
+  // IMG_8704 removed — file not available
+];
+---
+
+<BaseLayout title="2025 New Year's Trip - Q's Blog">
+  <div class="container">
+    <div class="gallery-header">
+      <h1>2025 New Year's Trip</h1>
+      <div class="gallery-description">
+        <p><strong>Valley of Fire | Bryce Canyon NP | Zion NP | Outdoor Bouldering, Hiking</strong></p>
+        <ul>
+          <li>在Las Vegas看到了大球。</li>
+          <li>Valley of Fire离Vegas非常近，顾名思义，红色石头瞩目。排队进园的时候看到了大角羊(Bighorn sheep)，但感觉是一群小孩子，体型不大。</li>
+          <li>攀岩公园叫<a href="https://www.mountainproject.com/area/112517396/mario-land">Mario Land</a>！有意思，等我能做自重引体了再来。</li>
+          <li>Bryce Canyon很震撼，可惜没有下雪。</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="gallery-section">
+      <GalleryGrid images={bryce_1} layout="single" />
+      <GalleryGrid images={bryce_2} layout="half" caption="Bryce NP and Valley of Fire" />
+    </section>
+
+    <hr />
+
+    <div class="gallery-description" style="margin-top: 1.5rem;">
+      <ul>
+        <li>2025年的第一个早上，天使降临！
+          <ul>
+            <li>Trail的名字叫 Angel's Landing（天使降临），迷人的同时非常险峻。<a href="https://www.alltrails.com/trail/us/utah/angels-landing-trail">Trail Info</a></li>
+            <li>在安装chain之前，是美国最危险的trail之一，装了chain之后仍有事故发生。刀锋一样的山体，狭窄的步道两边是悬崖，因此需要permit来限制人数，对恐高者非常非常不友好。</li>
+            <li>一定要提前约，<a href="https://www.nps.gov/zion/planyourvisit/angels-landing-hiking-permits.htm">Angel's landing permit</a></li>
+            <li>无证爬山了（seriously，这很不对），喜提250。</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <section class="gallery-section">
+      <GalleryGrid images={zion_1} layout="single" />
+      <GalleryGrid images={zion_2} layout="half" caption="Zion NP" />
+    </section>
+
+    <hr />
+
+    <div class="gallery-description" style="margin-top: 1.5rem;">
+      <p>New Year photo of us</p>
+    </div>
+
+    <section class="gallery-section">
+      <GalleryGrid images={people} layout="single" caption="Joy & Tom" />
+      <GalleryGrid images={people_2} layout="half" caption="Climbing F3.5 (I'm a half)" />
+    </section>
+  </div>
+
+  <Lightbox />
+</BaseLayout>

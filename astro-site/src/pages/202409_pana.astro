@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
+import Lightbox from '../components/Lightbox.astro';
+
+const panaful = [
+  { image_path: '/gallery/DSC09473.webp', alt: 'Panorama Ridge' },
+  { image_path: '/gallery/DSC09421.webp', alt: 'Panorama Ridge' },
+];
+
+const pana = [
+  { image_path: '/gallery/DSC09429.webp', alt: 'Panorama Ridge' },
+  { image_path: '/gallery/DSC09490.webp', alt: 'Panorama Ridge' },
+  { image_path: '/gallery/DSC09428.webp', alt: 'Panorama Ridge' },
+  { image_path: '/gallery/DSC09402.webp', alt: 'Panorama Ridge' },
+  { image_path: '/gallery/DSC09443.webp', alt: 'Panorama Ridge' },
+  { image_path: '/gallery/DSC09493.webp', alt: 'Panorama Ridge' },
+  { image_path: '/gallery/DSC09426.webp', alt: 'Panorama Ridge' },
+  { image_path: '/gallery/DSC09488.webp', alt: 'Panorama Ridge' },
+];
+
+const panaver = [
+  { image_path: '/gallery/DSC09388.webp', alt: 'Panorama Ridge' },
+  { image_path: '/gallery/DSC09510.webp', alt: 'Panorama Ridge' },
+  { image_path: '/gallery/DSC09484.webp', alt: 'Panorama Ridge' },
+];
+---
+
+<BaseLayout title="Panorama Ridge - Q's Blog">
+  <div class="container">
+    <div class="gallery-header">
+      <h1>Panorama Ridge</h1>
+      <div class="gallery-description">
+        <p><strong>2024.09 | Panorama Ridge</strong></p>
+        <ul>
+          <li><a href="https://www.alltrails.com/trail/canada/british-columbia/panorama-ridge">Trail Info</a>
+            <ul>
+              <li>Length: 17.6mi</li>
+              <li>Elevation gain: 5,288ft</li>
+            </ul>
+          </li>
+          <li>神之步道。</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="gallery-section">
+      <GalleryGrid images={panaful} layout="single" />
+      <GalleryGrid images={pana} layout="half" />
+      <GalleryGrid images={panaver} layout="half" caption="Panorama Ridge" />
+    </section>
+  </div>
+
+  <Lightbox />
+</BaseLayout>

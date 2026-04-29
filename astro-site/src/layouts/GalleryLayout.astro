@@ -1,0 +1,40 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
+import Lightbox from '../components/Lightbox.astro';
+
+const { frontmatter } = Astro.props;
+const title = frontmatter.title;
+
+// Collect all gallery groups from frontmatter
+// Convention: keys starting with "gallery" are image arrays
+// Each gallery key can have a matching "_layout" and "_caption" key
+const galleryKeys = Object.keys(frontmatter).filter(
+  k => k.startsWith('gallery') && !k.endsWith('_layout') && !k.endsWith('_caption') && Array.isArray(frontmatter[k])
+);
+
+// Sort by key name to maintain order
+galleryKeys.sort();
+---
+
+<BaseLayout title={`${title} - Q's Blog`}>
+  <div class="container">
+    <div class="gallery-header">
+      <h1>{title}</h1>
+      <div class="gallery-description">
+        <slot />
+      </div>
+    </div>
+
+    <section class="gallery-section">
+      {galleryKeys.map(key => {
+        const images = frontmatter[key];
+        const layout = frontmatter[`${key}_layout`] || 'half';
+        const caption = frontmatter[`${key}_caption`] || '';
+        return <GalleryGrid images={images} layout={layout} caption={caption} />;
+      })}
+    </section>
+  </div>
+
+  <Lightbox />
+</BaseLayout>

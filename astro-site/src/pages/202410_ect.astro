@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
+import Lightbox from '../components/Lightbox.astro';
+
+const ectfull = [
+  { image_path: '/gallery/DSC09843-2.webp', alt: 'Enchantment' },
+  { image_path: '/gallery/DSC09829-2.webp', alt: 'Enchantment' },
+];
+
+const ect1 = [
+  { image_path: '/gallery/DSC09839-2.webp', alt: 'Enchantment' },
+  { image_path: '/gallery/DSC09895-2.webp', alt: 'Enchantment' },
+  { image_path: '/gallery/DSC09821-2.webp', alt: 'Enchantment' },
+  { image_path: '/gallery/DSC09899-2.webp', url: '/gallery/DSC09881-2.webp', alt: 'Enchantment' },
+  { image_path: '/gallery/DSC09892-2.webp', alt: 'Enchantment' },
+  { image_path: '/gallery/DSC09890-2.webp', alt: 'Enchantment' },
+  { image_path: '/gallery/DSC09894-2.webp', alt: 'Enchantment' },
+  { image_path: '/gallery/DSC09875-2.webp', alt: 'Enchantment' },
+  { image_path: '/gallery/DSC09816-2.webp', alt: 'Enchantment' },
+  { image_path: '/gallery/DSC09865-2.webp', alt: 'Enchantment' },
+];
+
+const ect2 = [
+  { image_path: '/gallery/DSC09904-2.webp', alt: 'Enchantment' },
+  { image_path: '/gallery/DSC09881-2.webp', alt: 'Enchantment' },
+  { image_path: '/gallery/DSC09901-2.webp', alt: 'Enchantment' },
+  { image_path: '/gallery/DSC09776-2.webp', alt: 'Enchantment' },
+];
+---
+
+<BaseLayout title="Enchantment Traverse - Q's Blog">
+  <div class="container">
+    <div class="gallery-header">
+      <h1>Enchantment Traverse</h1>
+      <div class="gallery-description">
+        <p><strong>2024.10 | Enchantment Traverse</strong></p>
+        <ul>
+          <li><a href="https://www.alltrails.com/trail/us/washington/the-enchantments-trail">Trail Info</a>
+            <ul>
+              <li>Length: 18.5mi (实测~23mi)</li>
+              <li>Elevation gain: 4,845ft</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="gallery-section">
+      <GalleryGrid images={ectfull} layout="single" />
+      <GalleryGrid images={ect1} layout="half" />
+      <GalleryGrid images={ect2} layout="half" caption="2024.10, Enchantment traverse" />
+    </section>
+
+    <hr />
+
+    <div class="gallery-description" style="margin-top: 1.5rem;">
+      <p>实际上：2:50am出发，一天一共开车来回6h徒步14h，步数第一次到了6w2。又陡又长的scramble up和又陡又长的scramble down，全程巨长+10mile垃圾下坡时间都占了！头灯下山很不好玩，心理+生理的hard，新手非常不友好</p>
+    </div>
+  </div>
+
+  <Lightbox />
+</BaseLayout>

@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
+import Lightbox from '../components/Lightbox.astro';
+
+const summit = [
+  { image_path: '/gallery/202508_sunrise/DSC09957.webp', width: 2560, height: 1440, loading: 'eager' as const, alt: '第一缕金色阳光照亮 Rainier 雪山，前景山脊仍沉在蓝色阴影里' },
+];
+const horizon = [
+  { image_path: '/gallery/202508_sunrise/DSC09963.webp', width: 2560, height: 1440, alt: '橙色晨空下，远山与云海一层层延伸到地平线' },
+];
+const mist = [
+  { image_path: '/gallery/202508_sunrise/DSC09977.webp', width: 2560, height: 1440, alt: '浅金色晨雾漫过山谷，森林山脊在雾中层叠' },
+];
+---
+
+<BaseLayout title="Sunrise - Q's Blog" description="2025.08 | Mount Rainier 的清晨，金色雪峰、远山与山谷里的雾。">
+  <div class="container">
+    <header class="gallery-header">
+      <h1>Sunrise</h1>
+      <div class="gallery-description"><p><strong>2025.08 | Mount Rainier</strong></p></div>
+    </header>
+
+    <section class="opening gallery-section" aria-label="金色雪峰">
+      <GalleryGrid images={summit} layout="single" />
+    </section>
+
+    <div class="gallery-description story-note">
+      <ul>
+        <li><a href="https://www.nps.gov/mora/planyourvisit/sunrise.htm">Sunrise</a> 位于 Mount Rainier 东北侧，开阔的高山草甸面向雪山与冰川。</li>
+        <li>雪峰先亮起来，山谷还在阴影里。转过身，远处是橙色天际和一层层的雾。</li>
+      </ul>
+    </div>
+
+    <section class="horizon" aria-label="晨光中的远山">
+      <GalleryGrid images={horizon} layout="single" />
+    </section>
+    <section class="mist" aria-label="山谷晨雾">
+      <GalleryGrid images={mist} layout="single" caption="2025.08，Sunrise" />
+    </section>
+  </div>
+  <Lightbox />
+</BaseLayout>
+
+<style>
+  .opening :global(.gallery-grid) { max-width: 1100px; }
+  .story-note { max-width: 800px; margin: 0 auto; padding: 1rem 0 3rem; }
+  .horizon { max-width: 900px; margin: 0 auto; padding-bottom: 3rem; }
+  .mist { max-width: 760px; margin: 0 auto; padding-bottom: 4rem; }
+  section :global(.gallery-item img) { height: auto; object-fit: contain; }
+  @media (max-width: 768px) {
+    .story-note { padding-bottom: 2rem; }
+    .horizon { padding-bottom: 1.5rem; }
+  }
+</style>

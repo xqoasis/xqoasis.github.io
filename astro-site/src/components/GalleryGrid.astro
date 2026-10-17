@@ -3,6 +3,9 @@ interface Image {
   image_path: string;
   url?: string;
   alt?: string;
+  width?: number;
+  height?: number;
+  loading?: 'eager' | 'lazy';
 }
 
 interface Props {
@@ -17,7 +20,7 @@ const { images, layout = 'half', caption } = Astro.props;
 <div class={`gallery-grid layout-${layout}`}>
   {images.map(img => (
     <div class="gallery-item" data-full={img.url || img.image_path}>
-      <img src={img.image_path} alt={img.alt || ''} loading="lazy" />
+      <img src={img.image_path} alt={img.alt || ''} width={img.width} height={img.height} loading={img.loading || 'lazy'} />
     </div>
   ))}
 </div>

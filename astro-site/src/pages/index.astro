@@ -18,7 +18,7 @@ import { albums } from '../data/albums';
     <div class="albums-grid">
       {albums.map(album => (
         <a href={`/${album.slug}/`} class="album-card">
-          <img src={album.cover} alt={album.title} loading="lazy" />
+          <img src={album.cover} alt={album.title} loading="lazy" style={album.coverPosition ? { objectPosition: album.coverPosition } : undefined} />
           <div class="album-card-overlay">
             <span class="album-card-title" lang={/[\u3400-\u9fff]/u.test(album.title) ? 'zh-CN' : 'en'}>{album.title}</span>
             {album.date && <span class="album-card-date">{album.date}</span>}

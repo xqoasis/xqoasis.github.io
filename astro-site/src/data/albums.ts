@@ -9,14 +9,34 @@ export interface Album {
   title: string;
   date: string;
   cover: string;
+  coverPosition?: string;
 }
 
 export const albums: Album[] = [
+  {
+    slug: '202512_landsend',
+    title: 'Lands End',
+    date: '2025.12',
+    cover: '/gallery/202512_landsend/DSC00369.webp',
+    coverPosition: 'center 65%',
+  },
   {
     slug: '202510_heron',
     title: '鸟与滩涂',
     date: '2025.10',
     cover: '/gallery/202510_heron/DSC00161.webp',
+  },
+  {
+    slug: '202509_rainier',
+    title: 'Mount Rainier',
+    date: '2025.09',
+    cover: '/gallery/202509_rainier/DSC00083.webp',
+  },
+  {
+    slug: '202508_sunrise',
+    title: 'Sunrise',
+    date: '2025.08',
+    cover: '/gallery/202508_sunrise/DSC09957.webp',
   },
   {
     slug: '202507_dickerman',

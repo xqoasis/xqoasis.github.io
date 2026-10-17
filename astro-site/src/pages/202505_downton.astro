@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import GalleryGrid from '../components/GalleryGrid.astro';
 import Lightbox from '../components/Lightbox.astro';
 
-const opening = [
+const closing = [
   { image_path: '/gallery/202505_downton/DSC00042.webp', alt: '横倒的树干与水中倒影组成交错的三角形，四周是茂密森林' },
 ];
 
@@ -37,10 +37,6 @@ const featured = [
     <GalleryGrid images={featured} layout="single" />
   </section>
 
-  <section class="wide-photo" aria-label="森林镜像">
-    <GalleryGrid images={opening} layout="single" />
-  </section>
-
   <div class="container">
     <div class="gallery-description story-note">
         <ul>
@@ -63,19 +59,23 @@ const featured = [
     <section class="texture-section" aria-label="浮萍与砂纹">
       <GalleryGrid images={textures} layout="half" caption="浮萍与砂纹，两种水波般的曲线" />
     </section>
+
+    <section class="closing-section" aria-label="森林镜像">
+      <GalleryGrid images={closing} layout="single" caption="2025.05，Bloedel Reserve" />
+    </section>
   </div>
 
   <Lightbox />
 </BaseLayout>
 
 <style>
-  .wide-photo :global(.gallery-grid.layout-single) {
-    max-width: none;
-    margin-bottom: 0;
+  .closing-section {
+    padding-bottom: 3rem;
   }
 
-  .wide-photo :global(.gallery-item) {
-    border-radius: 0;
+  .closing-section :global(.gallery-item img) {
+    height: auto;
+    object-fit: contain;
   }
 
   .story-note {

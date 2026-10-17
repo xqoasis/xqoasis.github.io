@@ -26,10 +26,8 @@ const mist = [
     </section>
 
     <div class="gallery-description story-note">
-      <ul>
-        <li><a href="https://www.nps.gov/mora/planyourvisit/sunrise.htm">Sunrise</a> 位于 Mount Rainier 东北侧，开阔的高山草甸面向雪山与冰川。</li>
-        <li>雪峰先亮起来，山谷还在阴影里。转过身，远处是橙色天际和一层层的雾。</li>
-      </ul>
+      <p>晨光先到雪峰，山谷还留在夜里。<br />远山一层层淡下去，直到与雾分不清。</p>
+      <p class="place-note"><a href="https://www.nps.gov/mora/planyourvisit/sunrise.htm">Sunrise</a>，Mount Rainier 东北侧。</p>
     </div>
 
     <section class="horizon" aria-label="晨光中的远山">
@@ -45,6 +43,7 @@ const mist = [
 <style>
   .opening :global(.gallery-grid) { max-width: 1100px; }
   .story-note { max-width: 800px; margin: 0 auto; padding: 1rem 0 3rem; }
+  .place-note { font-size: 0.85rem; margin-top: 1.25rem; }
   .horizon { max-width: 900px; margin: 0 auto; padding-bottom: 3rem; }
   .mist { max-width: 760px; margin: 0 auto; padding-bottom: 4rem; }
   section :global(.gallery-item img) { height: auto; object-fit: contain; }

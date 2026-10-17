@@ -3,26 +3,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import GalleryGrid from '../components/GalleryGrid.astro';
 import Lightbox from '../components/Lightbox.astro';
 
-const residence = [
-  { image_path: '/gallery/202505_downton/DSC00005.webp', alt: 'Bloedel Reserve 的白色住宅，前方是草坪与蓝绿色池塘，两侧高树环抱' },
+const opening = [
+  { image_path: '/gallery/202505_downton/DSC00042.webp', alt: '横倒的树干与水中倒影组成交错的三角形，四周是茂密森林' },
 ];
 
-const details = [
-  { image_path: '/gallery/202505_downton/DSC00037.webp', alt: '住宅的对称门窗与铁艺阳台，门洞框住一位访客、远处的海湾与雪山' },
-  { image_path: '/gallery/202505_downton/DSC00009.webp', alt: '垂柳伸向池塘，明亮的浮萍沿岸弯出一道曲线' },
+const estate = [
+  { file: 'DSC00005', position: 'estate-landscape', width: 2560, height: 1440, alt: 'Bloedel Reserve 的白色住宅，前方是草坪与蓝绿色池塘，两侧高树环抱' },
+  { file: 'DSC00036', position: 'estate-portrait', width: 1440, height: 2560, alt: '住宅的对称门窗与铁艺阳台，门洞框住一位访客、海湾与远处的雪山' },
+  { file: 'DSC00049', position: 'estate-landscape', width: 2560, height: 1440, alt: '阳光穿过低垂的树枝，照亮庭园中的苔地与石头' },
+];
+
+const textures = [
+  { image_path: '/gallery/202505_downton/DSC00011.webp', alt: '幽暗垂柳前，阳光照亮池塘上的浮萍与树影' },
   { image_path: '/gallery/202505_downton/DSC00044.webp', alt: '日式客舍前的砂石庭园，苔石周围耙出同心纹路' },
 ];
 
-const garden = [
-  { image_path: '/gallery/202505_downton/DSC00049.webp', alt: '阳光穿过低垂的树枝，照亮庭园中的苔地与石头' },
-];
-
 const reflectionPool = [
-  { image_path: '/gallery/202505_downton/DSC00053.webp', alt: 'Reflection Pool 两侧的绿篱与草坪向远处收拢，水面映出森林' },
+  { image_path: '/gallery/202505_downton/DSC00055.webp', alt: 'Reflection Pool 两侧明暗交错的绿篱向远处收拢，深色水面映出森林' },
 ];
 
-const forest = [
-  { image_path: '/gallery/202505_downton/DSC00042.webp', alt: '横倒的树干与水中倒影组成交错的三角形，四周是茂密森林' },
+const closing = [
   { image_path: '/gallery/202505_downton/DSC00057.webp', alt: '林间水面上的青蓝色倒影与交错树枝' },
 ];
 ---
@@ -33,19 +33,46 @@ const forest = [
       <h1>Bloedel Reserve</h1>
       <div class="gallery-description">
         <p><strong>2025.05 | Bainbridge Island</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <section class="wide-photo" aria-label="森林镜像">
+    <GalleryGrid images={opening} layout="single" />
+  </section>
+
+  <div class="container">
+    <div class="gallery-description story-note">
         <ul>
           <li><a href="https://bloedelreserve.org/gardens-2/">Bloedel Reserve</a>，Bainbridge 岛上的森林花园。草坪、池塘、日式庭园和树林，在这里连成一段步行路线。</li>
           <li>白色宅邸有让人想到《唐顿庄园》的气质。它实际采用法国乡间别墅风格，1932 年落成，后来成为 Bloedel 夫妇的家。<a href="https://bloedelreserve.org/lasting-legacy/">住宅历史</a></li>
         </ul>
-      </div>
     </div>
 
-    <section class="gallery-section">
-      <GalleryGrid images={residence} layout="single" caption="The Residence，池塘另一侧的白色宅邸" />
-      <GalleryGrid images={details} layout="third" caption="门洞里的海景、池边的垂柳、砂石间的纹路" />
-      <GalleryGrid images={garden} layout="single" />
-      <GalleryGrid images={reflectionPool} layout="single" caption="Reflection Pool，绿篱与森林的对称倒影" />
-      <GalleryGrid images={forest} layout="single" caption="2025.05，Bloedel Reserve" />
+    <section class="estate-section" aria-label="住宅与庭园">
+      <div class="estate-spread">
+        {estate.map(photo => (
+          <div class={`gallery-item ${photo.position}`} data-full={`/gallery/202505_downton/${photo.file}.webp`}>
+            <img src={`/gallery/202505_downton/${photo.file}.webp`} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" />
+          </div>
+        ))}
+      </div>
+      <p class="gallery-caption">The Residence，宅邸、门洞里的海景与树下的光</p>
+    </section>
+
+    <section class="texture-section" aria-label="浮萍与砂纹">
+      <GalleryGrid images={textures} layout="half" caption="浮萍与砂纹，两种水波般的曲线" />
+    </section>
+  </div>
+
+  <section class="wide-photo" aria-label="倒影池">
+    <GalleryGrid images={reflectionPool} layout="single" />
+  </section>
+
+  <div class="container">
+    <p class="gallery-caption reflection-caption">Reflection Pool，绿篱与森林的对称倒影</p>
+    <section class="closing-section" aria-label="林间水景">
+      <GalleryGrid images={closing} layout="single" caption="2025.05，Bloedel Reserve" />
     </section>
   </div>
 
@@ -53,7 +80,85 @@ const forest = [
 </BaseLayout>
 
 <style>
-  .gallery-section :global(.gallery-grid.layout-single) {
+  .wide-photo :global(.gallery-grid.layout-single) {
     max-width: none;
+    margin-bottom: 0;
+  }
+
+  .wide-photo :global(.gallery-item) {
+    border-radius: 0;
+  }
+
+  .story-note {
+    max-width: 800px;
+    padding: 2.5rem 0;
+    margin-bottom: 0;
+  }
+
+  .estate-spread {
+    display: grid;
+    grid-template-columns: minmax(0, 1.56fr) minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .estate-landscape {
+    grid-column: 1;
+  }
+
+  .estate-landscape img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .estate-portrait {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    min-height: 0;
+  }
+
+  .estate-section {
+    padding-bottom: 4rem;
+  }
+
+  .texture-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+  }
+
+  .reflection-caption {
+    margin-top: 1rem;
+  }
+
+  .closing-section {
+    padding: 4rem 0 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .estate-spread {
+      grid-template-columns: 1fr;
+    }
+
+    .estate-landscape,
+    .estate-portrait {
+      grid-column: auto;
+      grid-row: auto;
+    }
+
+    .estate-portrait img {
+      height: auto;
+    }
+
+    .story-note {
+      padding: 1.5rem 0;
+    }
+
+    .estate-section,
+    .texture-section {
+      padding-bottom: 2.5rem;
+    }
+
+    .closing-section {
+      padding-top: 2.5rem;
+    }
   }
 </style>

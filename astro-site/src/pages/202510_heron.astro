@@ -4,20 +4,20 @@ import GalleryGrid from '../components/GalleryGrid.astro';
 import Lightbox from '../components/Lightbox.astro';
 
 const tidelands = [
-  { image_path: '/gallery/202510_heron/DSC00161.webp', alt: 'A heron and its reflection among winding channels and layered mudflats' },
+  { image_path: '/gallery/202510_heron/DSC00161.webp', alt: '蜿蜒水道和层叠滩涂间，一只鹭鸟与它的倒影' },
 ];
 
 const landscape = [
-  { image_path: '/gallery/202510_heron/DSC00162.webp', alt: 'A heron standing in a tidal channel below distant forest and mountains' },
+  { image_path: '/gallery/202510_heron/DSC00162.webp', alt: '远处的森林与山峰下，一只鹭鸟站在滩涂水道里' },
 ];
 ---
 
-<BaseLayout title="Heron & Tidelands - Q's Blog" description="2025.10 | 弯弯的水道、层层的滩涂，一只鸟和它的倒影。">
+<BaseLayout title="鸟与滩涂 - Q's Blog" description="2025.10 | 弯弯的水道、层层的滩涂，一只鸟和它的倒影。">
   <div class="container">
     <div class="gallery-header">
-      <h1>Heron &amp; Tidelands</h1>
+      <h1>鸟与滩涂</h1>
       <div class="gallery-description">
-        <p><strong>2025.10 | Heron &amp; Tidelands</strong></p>
+        <p><strong>2025.10 | 鸟与滩涂</strong></p>
         <ul>
           <li>弯弯的水道、层层的滩涂，一只鸟和它的倒影。</li>
           <li>看外形很像<a href="https://www.allaboutbirds.org/guide/Great_Blue_Heron/id">大蓝鹭 (Great Blue Heron)</a>，会在浅水里静静等猎物。很有耐心的样子。</li>
@@ -26,9 +26,9 @@ const landscape = [
     </div>
 
     <section class="gallery-section">
-      <GalleryGrid images={tidelands} layout="single" caption="A heron and its reflection" />
+      <GalleryGrid images={tidelands} layout="single" caption="一只鸟，和它的倒影" />
       <div class="portrait">
-        <GalleryGrid images={landscape} layout="single" caption="2025.10, Heron & Tidelands" />
+        <GalleryGrid images={landscape} layout="single" caption="2025.10，鸟与滩涂" />
       </div>
     </section>
   </div>

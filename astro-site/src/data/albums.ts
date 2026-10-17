@@ -14,7 +14,7 @@ export interface Album {
 export const albums: Album[] = [
   {
     slug: '202510_heron',
-    title: 'Heron & Tidelands',
+    title: '鸟与滩涂',
     date: '2025.10',
     cover: '/gallery/202510_heron/DSC00161.webp',
   },

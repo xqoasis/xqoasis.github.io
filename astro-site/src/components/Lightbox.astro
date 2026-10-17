@@ -7,8 +7,10 @@
 </div>
 
 <script>
-  document.addEventListener('astro:page-load', () => {
+  function setupLightbox() {
     const overlay = document.getElementById('lightbox') as HTMLDivElement;
+    if (!overlay || overlay.dataset.initialized) return;
+    overlay.dataset.initialized = 'true';
     const lbImg = document.getElementById('lightbox-img') as HTMLImageElement;
     const items = Array.from(document.querySelectorAll('.gallery-item'));
     let currentIndex = 0;
@@ -52,5 +54,8 @@
       if (e.key === 'ArrowLeft') navigate(-1);
       if (e.key === 'ArrowRight') navigate(1);
     });
-  });
+  }
+
+  setupLightbox();
+  document.addEventListener('astro:page-load', setupLightbox);
 </script>

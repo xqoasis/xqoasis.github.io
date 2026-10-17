@@ -13,6 +13,18 @@ export interface Album {
 
 export const albums: Album[] = [
   {
+    slug: '202510_heron',
+    title: 'Heron & Tidelands',
+    date: '2025.10',
+    cover: '/gallery/202510_heron/DSC00161.webp',
+  },
+  {
+    slug: '202507_dickerman',
+    title: 'Mount Dickerman',
+    date: '2025.07',
+    cover: '/gallery/202507_dickerman/DSC00280.webp',
+  },
+  {
     slug: '202501_np',
     title: "2025 New Year's Trip",
     date: '2025.01',

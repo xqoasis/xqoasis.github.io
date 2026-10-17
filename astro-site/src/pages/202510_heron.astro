@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
+import Lightbox from '../components/Lightbox.astro';
+
+const tidelands = [
+  { image_path: '/gallery/202510_heron/DSC00161.webp', alt: 'A heron and its reflection among winding channels and layered mudflats' },
+];
+
+const landscape = [
+  { image_path: '/gallery/202510_heron/DSC00162.webp', alt: 'A heron standing in a tidal channel below distant forest and mountains' },
+];
+---
+
+<BaseLayout title="Heron & Tidelands - Q's Blog" description="2025.10 | 弯弯的水道、层层的滩涂，一只鸟和它的倒影。">
+  <div class="container">
+    <div class="gallery-header">
+      <h1>Heron &amp; Tidelands</h1>
+      <div class="gallery-description">
+        <p><strong>2025.10 | Heron &amp; Tidelands</strong></p>
+        <ul>
+          <li>弯弯的水道、层层的滩涂，一只鸟和它的倒影。</li>
+          <li>看外形很像<a href="https://www.allaboutbirds.org/guide/Great_Blue_Heron/id">大蓝鹭 (Great Blue Heron)</a>，会在浅水里静静等猎物。很有耐心的样子。</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="gallery-section">
+      <GalleryGrid images={tidelands} layout="single" caption="A heron and its reflection" />
+      <div class="portrait">
+        <GalleryGrid images={landscape} layout="single" caption="2025.10, Heron & Tidelands" />
+      </div>
+    </section>
+  </div>
+
+  <Lightbox />
+</BaseLayout>
+
+<style>
+  .portrait {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+</style>

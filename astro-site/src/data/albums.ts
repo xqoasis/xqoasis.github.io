@@ -26,9 +26,9 @@ export const albums: Album[] = [
   },
   {
     slug: '202505_downton',
-    title: 'Downton',
+    title: 'Bloedel Reserve',
     date: '2025.05',
-    cover: '/gallery/202505_downton/DSC00057.webp',
+    cover: '/gallery/202505_downton/DSC00005.webp',
   },
   {
     slug: '202501_np',

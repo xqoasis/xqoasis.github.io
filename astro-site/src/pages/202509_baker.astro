@@ -24,21 +24,28 @@ const details = [
     </section>
 
     <div class="gallery-description story-note">
-      <p><a href="https://www.usgs.gov/volcanoes/mount-baker">Mount Baker</a> 是我在西雅图最喜欢的山。<br />山形舒展，白雪勾出柔和的轮廓。</p>
-      <p>晴天，从西雅图和温哥华都能望见它。<br />城市换了，远处的山还在。</p>
+      <p><a href="https://www.usgs.gov/volcanoes/mount-baker">Mount Baker</a> 是我在西雅图最喜欢的山。它的峰顶圆缓，山脊向两侧舒展；雪与云相接，轮廓时隐时现，姿态却始终清朗。</p>
+      <p>晴天，从西雅图和温哥华都能望见它。隔着国界的两座城，共有一座雪山的轮廓。风景换了，它仍在天际，安静而分明。</p>
     </div>
 
     <section class="details" aria-label="雪山与冰面，两张竖幅">
-      <GalleryGrid images={details} layout="half" caption="走近才看见，雪也有淡淡的粉色。2025.09，Mount Baker" />
+      <GalleryGrid images={details} layout="half" />
     </section>
+    <div class="gallery-description scene-note">
+      <p>近处的雪面并非纯白。灰蓝的冰纹之间，几道浅粉沿坡面延伸，浓处像薄薄的胭脂，淡处又回到雪里。</p>
+      <p class="place-note">2025.09，Mount Baker</p>
+    </div>
   </div>
   <Lightbox />
 </BaseLayout>
 
 <style>
   .opening :global(.gallery-grid) { max-width: 1100px; }
-  .story-note { max-width: 800px; margin: 0 auto; padding: 1rem 0 3rem; }
-  .details { max-width: 900px; margin: 0 auto; padding-bottom: 4rem; }
+  .story-note, .scene-note { max-width: 720px; margin: 0 auto; color: var(--color-text); }
+  .story-note { padding: 1rem 0 3rem; }
+  .scene-note { padding: 0.5rem 0 4rem; }
+  .place-note { font-size: 0.85rem; margin-top: 1.25rem; color: var(--color-text-muted); }
+  .details { max-width: 900px; margin: 0 auto; }
   .details :global(.gallery-grid.layout-half) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: clamp(0.5rem, 1.5vw, 1.25rem);

@@ -25,6 +25,12 @@ export const albums: Album[] = [
     cover: '/gallery/202507_dickerman/DSC00280.webp',
   },
   {
+    slug: '202505_downton',
+    title: 'Downton',
+    date: '2025.05',
+    cover: '/gallery/202505_downton/DSC00057.webp',
+  },
+  {
     slug: '202501_np',
     title: "2025 New Year's Trip",
     date: '2025.01',

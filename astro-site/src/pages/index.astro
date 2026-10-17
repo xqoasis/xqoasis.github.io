@@ -20,7 +20,7 @@ import { albums } from '../data/albums';
         <a href={`/${album.slug}/`} class="album-card">
           <img src={album.cover} alt={album.title} loading="lazy" />
           <div class="album-card-overlay">
-            <span class="album-card-title">{album.title}</span>
+            <span class="album-card-title" lang={/[\u3400-\u9fff]/u.test(album.title) ? 'zh-CN' : 'en'}>{album.title}</span>
             {album.date && <span class="album-card-date">{album.date}</span>}
           </div>
         </a>

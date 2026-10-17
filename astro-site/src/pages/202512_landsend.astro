@@ -4,25 +4,25 @@ import GalleryGrid from '../components/GalleryGrid.astro';
 import Lightbox from '../components/Lightbox.astro';
 
 const ocean = [
-  { image_path: '/gallery/202512_landsend/DSC00369.webp', width: 1440, height: 2560, loading: 'eager' as const, alt: '粉紫色天空下的大片海面与弧形浪线，沙滩上的两个人显得很小' },
+  { image_path: '/gallery/202512_landsend/DSC00369.webp', width: 1440, height: 2560, alt: '粉紫色天空下的大片海面与弧形浪线，沙滩上的两个人显得很小' },
 ];
 const tunnel = [
   { image_path: '/gallery/202512_landsend/DSC00351.webp', width: 2560, height: 1440, alt: '幽暗洞口框住海面和礁石，一个人站在亮处成为剪影' },
 ];
 const sunset = [
-  { image_path: '/gallery/202512_landsend/DSC00359.webp', width: 2560, height: 1440, alt: '落日把海面染成金色，浪花从深色礁石旁涌过' },
+  { image_path: '/gallery/202512_landsend/DSC00359.webp', width: 2560, height: 1440, loading: 'eager' as const, alt: '落日把海面染成金色，浪花从深色礁石旁涌过' },
 ];
 ---
 
-<BaseLayout title="Lands End - Q's Blog" description="2025.12 | San Francisco 的海岸，大片海面里的小人物、洞口剪影与落日。">
+<BaseLayout title="Lands End - Q's Blog" description="2025.12 | San Francisco 的海岸，金色落日、洞口剪影与大片海面里的小人物。">
   <div class="container">
     <header class="gallery-header">
       <h1>Lands End</h1>
       <div class="gallery-description"><p><strong>2025.12 | San Francisco</strong></p></div>
     </header>
 
-    <section class="ocean gallery-section" aria-label="海与人">
-      <GalleryGrid images={ocean} layout="single" />
+    <section class="sunset gallery-section" aria-label="海上落日">
+      <GalleryGrid images={sunset} layout="single" />
     </section>
 
     <div class="gallery-description story-note">
@@ -35,21 +35,20 @@ const sunset = [
     <section class="tunnel" aria-label="洞口剪影">
       <GalleryGrid images={tunnel} layout="single" />
     </section>
-    <section class="sunset" aria-label="海上落日">
-      <GalleryGrid images={sunset} layout="single" caption="2025.12，Lands End" />
+    <section class="ocean" aria-label="海与人">
+      <GalleryGrid images={ocean} layout="single" caption="2025.12，Lands End" />
     </section>
   </div>
   <Lightbox />
 </BaseLayout>
 
 <style>
-  .ocean { max-width: 580px; margin: 0 auto; padding-top: 2rem; }
+  .ocean { max-width: 580px; margin: 0 auto; padding-bottom: 4rem; }
   .story-note { max-width: 800px; margin: 0 auto; padding: 1.5rem 0 3rem; }
   .tunnel { max-width: 900px; margin: 0 auto; padding-bottom: 3rem; }
-  .sunset { max-width: 900px; margin: 0 auto; padding-bottom: 4rem; }
+  .sunset { max-width: 900px; margin: 0 auto; }
   section :global(.gallery-item img) { height: auto; object-fit: contain; }
   @media (max-width: 768px) {
-    .ocean { padding-top: 1rem; }
     .story-note { padding-bottom: 2rem; }
     .tunnel { padding-bottom: 1.5rem; }
   }

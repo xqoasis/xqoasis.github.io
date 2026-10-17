@@ -17,8 +17,7 @@ export const albums: Album[] = [
     slug: '202512_landsend',
     title: 'Lands End',
     date: '2025.12',
-    cover: '/gallery/202512_landsend/DSC00369.webp',
-    coverPosition: 'center 65%',
+    cover: '/gallery/202512_landsend/DSC00359.webp',
   },
   {
     slug: '202510_heron',
@@ -27,10 +26,10 @@ export const albums: Album[] = [
     cover: '/gallery/202510_heron/DSC00161.webp',
   },
   {
-    slug: '202509_rainier',
-    title: 'Mount Rainier',
+    slug: '202509_baker',
+    title: 'Mount Baker',
     date: '2025.09',
-    cover: '/gallery/202509_rainier/DSC00083.webp',
+    cover: '/gallery/202509_baker/DSC00083.webp',
   },
   {
     slug: '202508_sunrise',

@@ -18,7 +18,7 @@ const textures = [
   { image_path: '/gallery/202505_downton/DSC00044.webp', alt: '日式客舍前的砂石庭园，苔石周围耙出同心纹路' },
 ];
 
-const closing = [
+const featured = [
   { image_path: '/gallery/202505_downton/DSC00057.webp', alt: '林间水面上的青蓝色倒影与交错树枝' },
 ];
 ---
@@ -32,6 +32,10 @@ const closing = [
       </div>
     </div>
   </div>
+
+  <section class="featured-section" aria-label="林间水景">
+    <GalleryGrid images={featured} layout="single" />
+  </section>
 
   <section class="wide-photo" aria-label="森林镜像">
     <GalleryGrid images={opening} layout="single" />
@@ -60,10 +64,6 @@ const closing = [
       <GalleryGrid images={textures} layout="half" caption="浮萍与砂纹，两种水波般的曲线" />
     </section>
   </div>
-
-  <section class="closing-section" aria-label="林间水景">
-    <GalleryGrid images={closing} layout="single" caption="2025.05，Bloedel Reserve" />
-  </section>
 
   <Lightbox />
 </BaseLayout>
@@ -111,6 +111,7 @@ const closing = [
   .texture-section {
     max-width: 900px;
     margin: 0 auto;
+    padding-bottom: 3rem;
   }
 
   .texture-section :global(.gallery-grid.layout-half) {
@@ -118,14 +119,14 @@ const closing = [
     gap: clamp(0.5rem, 1vw, 0.75rem);
   }
 
-  .closing-section {
+  .featured-section {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
     padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 5rem) 3rem;
   }
 
-  .closing-section :global(.gallery-grid.layout-single) {
+  .featured-section :global(.gallery-grid.layout-single) {
     max-width: none;
   }
 

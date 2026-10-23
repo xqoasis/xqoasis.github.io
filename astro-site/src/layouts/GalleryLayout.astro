@@ -20,7 +20,7 @@ galleryKeys.sort();
 <BaseLayout title={`${title} - Q's Blog`}>
   <div class="container">
     <div class="gallery-header">
-      <h1>{title}</h1>
+      <h1 lang={/[\u3400-\u9fff]/u.test(title) ? 'zh-CN' : 'en'}>{title}</h1>
       <div class="gallery-description">
         <slot />
       </div>

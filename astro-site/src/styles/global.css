@@ -14,7 +14,7 @@
   --color-accent-hover: #000000;
   --color-card-bg: #fafafa;
   --color-nav-bg: rgba(255, 255, 255, 0.92);
-  --font-sans: 'DM Sans', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'DM Sans', 'Noto Serif SC', 'Songti SC', 'STSong', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-display: 'Space Grotesk', 'DM Sans', sans-serif;
   --max-width: 1200px;
   --nav-height: 64px;

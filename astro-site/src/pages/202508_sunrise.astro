@@ -26,21 +26,18 @@ const mist = [
     </section>
 
     <div class="gallery-description story-note">
-      <p>清晨的光先抵达雪峰。金色沿着积雪展开，山腰以下仍是蓝灰。山谷还在暗处，山上的光已经向下移了。</p>
+      <p>晨光先到雪峰，山谷还留在夜里。</p>
       <p class="place-note"><a href="https://www.nps.gov/mora/planyourvisit/sunrise.htm">Sunrise</a>，Mount Rainier 东北侧。</p>
     </div>
 
     <section class="horizon" aria-label="晨光中的远山">
       <GalleryGrid images={horizon} layout="single" />
     </section>
-    <div class="gallery-description scene-note">
-      <p>转向远处，橙色的天光横在群山之上。山峦一层层淡下去，锋利的轮廓也渐渐柔和。近处与远处之间，没有清楚的界线，只有颜色的深浅。</p>
-    </div>
     <section class="mist" aria-label="山谷晨雾">
       <GalleryGrid images={mist} layout="single" />
     </section>
     <div class="gallery-description scene-note closing-note">
-      <p>雾漫过山谷，树梢在其中浮出一线。群山褪去细节，只留下深浅相接的轮廓。越往远处，山与天越难分辨。</p>
+      <p>远山一层层淡下去，直到与雾分不清。</p>
       <p class="place-note">2025.08，Sunrise</p>
     </div>
   </div>
@@ -54,7 +51,7 @@ const mist = [
   .scene-note { padding: 0.5rem 0 3rem; }
   .closing-note { padding-bottom: 4rem; }
   .place-note { font-size: 0.85rem; margin-top: 1.25rem; color: var(--color-text-muted); }
-  .horizon { max-width: 900px; margin: 0 auto; }
+  .horizon { max-width: 900px; margin: 0 auto; padding-bottom: 3rem; }
   .mist { max-width: 760px; margin: 0 auto; }
   section :global(.gallery-item img) { height: auto; object-fit: contain; }
   @media (max-width: 768px) {

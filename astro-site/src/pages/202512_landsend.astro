@@ -28,21 +28,18 @@ const sunset = [
 
   <div class="container">
     <div class="gallery-description story-note">
-      <p>傍晚的光从云隙间落下来，在海面上铺成一片金色。礁石仍是暗的，浪绕过它们，向岸上展开。海面上的光忽明忽暗，细纹一直铺向天边。</p>
-      <p class="place-note"><a href="https://www.nps.gov/goga/planyourvisit/landsend.htm">Lands End</a> 位于旧金山西北角。海岸步道沿峭壁延伸，Sutro Baths 的遗址就在附近。</p>
+      <p>金光铺过海面，浪绕过礁石。</p>
+      <p class="place-note"><a href="https://www.nps.gov/goga/planyourvisit/landsend.htm">Lands End</a>，旧金山西北角，Sutro Baths 一带的海岸。</p>
     </div>
 
     <section class="tunnel" aria-label="洞口剪影">
       <GalleryGrid images={tunnel} layout="single" />
     </section>
-    <div class="gallery-description scene-note">
-      <p>洞内很暗，出口却是一片明亮。一个人的侧影立在海前，礁石、浪和远处的天空，都收进这道不规则的边框里。</p>
-    </div>
     <section class="ocean" aria-label="海与人">
       <GalleryGrid images={ocean} layout="single" />
     </section>
     <div class="gallery-description scene-note closing-note">
-      <p>天光淡成粉紫。湿润的沙滩留着一层薄水，映出天空，也映出两个人的影子。浪线一弯弯推近，天与海之间，只留下很小的身影。</p>
+      <p>天色淡成粉紫，人和倒影站在水边。</p>
       <p class="place-note">2025.12，Lands End</p>
     </div>
   </div>
@@ -56,7 +53,7 @@ const sunset = [
   .scene-note { padding: 0.5rem 0 3rem; }
   .closing-note { padding-bottom: 4rem; }
   .place-note { font-size: 0.85rem; margin-top: 1.25rem; color: var(--color-text-muted); }
-  .tunnel { max-width: 900px; margin: 0 auto; }
+  .tunnel { max-width: 900px; margin: 0 auto; padding-bottom: 3rem; }
   .sunset { width: 100%; max-width: 1600px; margin: 0 auto; padding: 1rem clamp(1rem, 4vw, 5rem) 2rem; }
   .sunset :global(.gallery-grid.layout-single) { max-width: none; }
   section :global(.gallery-item img) { height: auto; object-fit: contain; }

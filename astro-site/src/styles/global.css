@@ -212,6 +212,7 @@ main {
 }
 
 .albums-section h2 {
+  font-size: 1.3rem;
   margin-bottom: 2rem;
   font-weight: 600;
 }
@@ -259,14 +260,14 @@ main {
 
 .album-card-title {
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
 .album-card-date {
   color: rgba(255,255,255,0.75);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
 }
 
 .album-card-title[lang="zh-CN"],
@@ -282,12 +283,17 @@ main {
 }
 
 .gallery-header h1 {
+  font-size: 1.6rem;
   margin-bottom: 0.5rem;
+}
+
+.gallery-header .gallery-description > p {
+  font-size: 0.8rem;
 }
 
 .gallery-description {
   color: var(--color-text-muted);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   line-height: 1.8;
   margin-bottom: 1rem;
 }
